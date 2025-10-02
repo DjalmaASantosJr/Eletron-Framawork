@@ -1,11 +1,11 @@
-# 📷 PhotoViewer Lite v1.1.1
+# 📷 PhotoViewer Lite
 
 > **Visualizador de imagens moderno e avançado desenvolvido em Electron**
 
 Um aplicativo desktop completo que combina visualização de imagens com sistema integrado de **gerenciamento de energia**, oferecendo uma experiência profissional e recursos únicos para usuários avançados.
 
-[![Electron](https://img.shields.io/badge/Electron-37.4.0-47848f.svg)](https://electronjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Electron](https://img.shields.io/badge/Electron-^31.0.0-47848f.svg)](https://electronjs.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey.svg)](#-builds-multiplataforma)
 [![Version](https://img.shields.io/badge/Version-1.1.1-green.svg)](package.json)
 
@@ -13,14 +13,14 @@ Um aplicativo desktop completo que combina visualização de imagens com sistema
 
 ## 📸 Screenshots
 
-### Interface Principal
-![Interface Principal](docs/screenshot-main-interface.png)
+### Interface Principal (Tema Escuro)
+*(Screenshot da interface principal)*
 
 ### Gerenciamento de Energia
-![Gerenciamento de Energia](docs/screenshot-power-management.png)
+*(Screenshot da janela de gerenciamento de energia)*
 
 ### Sistema de Notificações
-![Sistema de Notificações](docs/screenshot-notifications.png)
+*(Screenshot do sistema de notificações)*
 
 ---
 
@@ -83,7 +83,7 @@ Um aplicativo desktop completo que combina visualização de imagens com sistema
 
 | Tecnologia | Versão | Propósito |
 |------------|--------|-----------|
-| **Electron** | 37.4.0 | Framework principal para aplicação desktop |
+| **Electron** | ^31.0.0 | Framework principal para aplicação desktop |
 | **Node.js** | Latest | Runtime JavaScript para backend |
 | **HTML5/CSS3** | - | Interface moderna e responsiva |
 | **JavaScript ES6+** | - | Lógica da aplicação e interações |
@@ -149,37 +149,20 @@ npm start
 
 ## 🏗️ Builds Multiplataforma
 
-### Windows
+O projeto utiliza **electron-packager** para criar builds portáteis que não necessitam de instalação.
 
-```bash
-# Método 1: Script automatizado
-.\build-windows.bat
+### Scripts de Build
 
-# Método 2: Comando direto
-npm run package
-```
+- **Para Windows**:
+  ```bash
+  npm run package
+  ```
+- **Para Linux**:
+  ```bash
+  npm run package:linux
+  ```
 
-**Executável gerado**: `dist\PhotoViewer-Lite-win32-x64\PhotoViewer-Lite.exe`
-
-### Linux
-
-```bash
-# Método 1: Script automatizado
-chmod +x build-linux.sh
-./build-linux.sh
-
-# Método 2: Comando direto
-npm run package:linux
-```
-
-**Executável gerado**: `dist/PhotoViewer-Lite-linux-x64/PhotoViewer-Lite`
-
-### Características das Builds
-
-- **Portáteis**: Não requerem instalação
-- **Independentes**: Incluem runtime do Electron
-- **Otimizadas**: ~285-293 MB por plataforma
-- **Cross-compilation**: Pode buildar para Linux a partir do Windows
+Para mais detalhes, como o uso dos scripts `.bat` e `.sh` e informações sobre o tamanho das builds, consulte o **Guia de Build**.
 
 ---
 
@@ -279,9 +262,9 @@ Tipos disponíveis: `success`, `warning`, `error`, `info`
 | Problema | Solução |
 |----------|---------|
 | **Erro ao buildar** | Execute `npm install` e tente novamente |
-| **Imagem não carrega** | Verifique se o formato é suportado (JPG, PNG, GIF, etc.) |
+| **Imagem não carrega** | Verifique se o formato é suportado (JPG, PNG, GIF, SVG, etc.) |
 | **Janela não abre** | Verifique se não há outro processo rodando |
-| **Atalhos não funcionam** | Execute como administrador (Windows) |
+| **Atalhos não funcionam** | Verifique se outro aplicativo não está usando o mesmo atalho global. |
 
 ### Logs e Debug
 
