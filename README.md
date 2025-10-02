@@ -11,19 +11,6 @@ Um aplicativo desktop completo que combina visualização de imagens com sistema
 
 ---
 
-## 📸 Screenshots
-
-### Interface Principal (Tema Escuro)
-*(Screenshot da interface principal)*
-
-### Gerenciamento de Energia
-*(Screenshot da janela de gerenciamento de energia)*
-
-### Sistema de Notificações
-*(Screenshot do sistema de notificações)*
-
----
-
 ## 🌟 Destaques do Projeto
 
 - 🖼️ **Visualizador Avançado**: Interface moderna com navegação intuitiva entre imagens
